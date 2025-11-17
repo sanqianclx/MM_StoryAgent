@@ -1,15 +1,19 @@
 story_dir: &story_dir generated_stories/example
 
+
+enable_story: false    
+enable_speech: false      
+enable_image: false    
+enable_video: true        
+
+
 story_writer:
-    tool: qa_outline_story_writer
+    # tool: qa_outline_story_write
+    tool: data_driven_story_writer
     cfg:
-        max_conv_turns: 3
-        num_outline: 4
         temperature: 0.5
     params:
-        story_topic: "Time Management: A child learning how to manage their time effectively."
-        main_role: "(no main role specified)"
-        scene: "(no scene specified)"
+        file_path: story_data.txt
 
 sound_generation:
     tool: audioldm2_t2a
@@ -27,9 +31,14 @@ sound_generation:
 speech_generation:
     tool: cosyvoice_tts
     cfg:
-        sample_rate: *sample_rate
+        sample_rate: 16000
+        region: "cn-shanghai"  
     params:
-        voice: longyuan
+        voice: "xiaoyun" 
+        format: "mp3"  
+        volume: 50     
+        speech_rate: 0 
+        pitch_rate: 0  
 
 
 image_generation:
@@ -75,9 +84,9 @@ video_compose:
             # stroke_width: 0.5
             max_length: 50
         slideshow_effect:
-            bg_speech_ratio: 0.6
-            sound_volume: 0.6
-            music_volume: 0.5
+            # bg_speech_ratio: 0.6
+            # sound_volume: 0.6
+            # music_volume: 0.5
             fade_duration: 0.8
             slide_duration: 0.4
             zoom_speed: 0.5

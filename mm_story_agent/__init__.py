@@ -10,6 +10,7 @@ _import_structure = {
         'AudioLDM2Agent',
         'CosyVoiceAgent',
         'StoryDiffusionAgent',
+        'DataDrivenStoryWriter',
         'QwenAgent',
         'FreesoundSfxAgent',
         'FreesoundMusicAgent'

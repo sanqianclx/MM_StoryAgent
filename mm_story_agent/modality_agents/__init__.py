@@ -5,6 +5,7 @@ from ..utils.import_utils import _LazyModule
 _import_structure = {
     'story_agent': [
         'QAOutlineStoryWriter',
+        'DataDrivenStoryWriter',
     ],
     'music_agent': [
         'MusicGenAgent'
@@ -24,6 +25,9 @@ _import_structure = {
     "freesound_agent": [
         "FreesoundSfxAgent",
         "FreesoundMusicAgent"
+    ],
+    "video_compose_agent": [
+        "SlideshowVideoComposeAgent"
     ]
 }
 

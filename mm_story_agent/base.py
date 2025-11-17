@@ -3,6 +3,7 @@ from abc import ABC
 register_map = {
     'qwen': 'QwenAgent',
     'qa_outline_story_writer': 'QAOutlineStoryWriter',
+    'data_driven_story_writer': 'DataDrivenStoryWriter', 
     'musicgen_t2m': 'MusicGenAgent',
     'story_diffusion_t2i': 'StoryDiffusionAgent',
     'cosyvoice_tts': 'CosyVoiceAgent',
@@ -15,7 +16,7 @@ register_map = {
 
 def import_from_register(key):
     value = register_map[key]
-    exec(f'from . import {value}')
+    exec(f'from mm_story_agent.modality_agents import {value}')
 
 
 class ToolRegistry(dict):

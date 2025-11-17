@@ -1,3 +1,56 @@
+## 运行需求
+1. moviepy需回退版本1.30.0
+2. 安装imageMagick，在安装过程中勾选 "Install legacy utilities (e.g. convert)" 选项
+3. 需要配置setup_env.bat文件，设置环境变量
+@echo off              
+set DASHSCOPE_API_KEY=               #使用的模型为wanx-v1（文生图）和qwen2-72b-instruct（文本生成）                        
+set ALIYUN_ACCESS_KEY_ID=                
+set ALIYUN_ACCESS_KEY_SECRET=                           
+set ALIYUN_APP_KEY=                         
+set ALIYUN_ACCESS_TOKEN=                 #这个不小心被ai改掉了，原来好像可以自动获取          
+set IMAGEMAGICK_BINARY=D:\imagemagick\ImageMagick-7.1.2-Q16-HDRI\magick.exe              #imageMagick的路径              
+#用于检查是否配置成功                     
+echo DASHSCOPE_API_KEY: %DASHSCOPE_API_KEY%                       
+echo ALIYUN_ACCESS_KEY_ID: %ALIYUN_ACCESS_KEY_ID%                        
+echo ALIYUN_ACCESS_KEY_SECRET: %ALIYUN_ACCESS_KEY_SECRET%                    
+echo ALIYUN_APP_KEY: %ALIYUN_APP_KEY%                    
+echo ALIYUN_ACCESS_TOKEN: %ALIYUN_ACCESS_TOKEN%                           
+echo IMAGEMAGICK_BINARY: %IMAGEMAGICK_BINARY%                          
+echo python run.py -c configs/mm_story_agent.yaml                           
+pause                             
+4. 运行setup_env.bat以配置环境                                
+5. 然后应该就可以运行了，也不确定  
+6. 暂时将输入的故事主题放在了story_data.txt里面               
+7. 语音合成的app配置为小云  MP3                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # MM-StoryAgent
 This repo is the official implementation of "MM-StoryAgent: Immersive Narrated Storybook Video Generation with a Multi-Agent Paradigm across Text, Image and Audio".
 
