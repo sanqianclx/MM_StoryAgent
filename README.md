@@ -21,7 +21,8 @@ pause
 4. 运行setup_env.bat以配置环境                                
 5. 然后应该就可以运行了，也不确定  
 6. 暂时将输入的故事主题放在了story_data.txt里面               
-7. 语音合成的app配置为小云  MP3                            
+7. 语音合成的app配置为小云  MP3        
+8. configs/mm_story_agent.yaml中的4-7行用于控制是否生成对应资源（可以复用之前生成的省点额度）                 
 
 
 
